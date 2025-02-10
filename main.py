@@ -5,6 +5,8 @@ from datetime import datetime, timedelta
 
 from fastapi.middleware.cors import CORSMiddleware
 
+app = FastAPI()
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Allow all origins (change this for security)
@@ -14,7 +16,6 @@ app.add_middleware(
 )
 
 
-app = FastAPI()
 
 # Sample Data
 cruise_companies = ["Royal Caribbean", "Carnival", "Norwegian", "Disney", "MSC"]
